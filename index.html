@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Module 3 CSS3 styling and responsive design notes with responsive business website project.">
+  <title>Module 3 CSS3 Styling and Responsive Design Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1>Module 3: CSS3 Styling and Responsive Design</h1>
+        <p>Simple Hinglish notes with theory, practical code, detailed explanation, and Project 3 responsive business website.</p>
+      </div>
+      <div class="badge-box">
+        <strong>Final Output</strong>
+        Same HTML project ko CSS ke help se modern, clean, and mobile responsive business website mein convert karna.
+      </div>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <a href="#goal">Module Goal</a>
+      <a href="#css-intro">CSS Basics</a>
+      <a href="#connect">Connect CSS</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#selectors">Selectors</a>
+      <a href="#specificity">Specificity</a>
+      <a href="#box-model">Box Model</a>
+      <a href="#flexbox">Flexbox</a>
+      <a href="#grid">CSS Grid</a>
+      <a href="#responsive">Responsive Design</a>
+      <a href="#media">Media Queries</a>
+      <a href="#animation">Animations</a>
+      <a href="#performance">Best Practices</a>
+      <a href="#project">Project 3</a>
+      <a href="#final-code">Final Code</a>
+      <a href="#checklist">Checklist</a>
+    </aside>
+
+    <main class="content">
+      <section id="goal">
+        <h2>Module Goal</h2>
+        <p>Module 2 mein learner ne HTML5 se website ka structure banaya tha. Ab Module 3 mein hum usi structure ko CSS3 ke help se style karenge. HTML website ka skeleton hota hai, aur CSS us skeleton ko design, spacing, colors, layout, and responsive behavior deta hai.</p>
+        <p>Is module ka main goal hai ki learner sirf CSS properties yaad na kare, balki samjhe ki real website mein CSS ka use kahan hota hai. Navigation ko align karna, hero section ko attractive banana, cards ko grid mein arrange karna, mobile screen par layout adjust karna, buttons par hover effect dena, aur spacing clean rakhna, yeh sab CSS ke practical use cases hain.</p>
+        <div class="note">
+          Teaching flow: pehle concept samjho, phir small code dekho, phir line-by-line explanation padho, aur finally Project 3 responsive business website build karo.
+        </div>
+      </section>
+
+      <section id="css-intro">
+        <h2>1. CSS Kya Hai?</h2>
+        <p>CSS ka full form hai Cascading Style Sheets. CSS website ke visual design ko control karta hai. HTML batata hai page par kya content hai, CSS batata hai woh content kaise dikhega. Example: heading ka color, paragraph ka font size, button ka background, card ka shadow, section ka spacing, mobile layout, and hover effects sab CSS se control hote hain.</p>
+        <p>Real-world example: Agar HTML ek shop ka structure hai, toh CSS us shop ka paint, lights, shelves, signboard, and arrangement hai. Same product agar clean shop mein arranged ho toh customer easily samajhta hai. Website mein bhi CSS content ko professional and readable banata hai.</p>
+
+        <h3>Types of CSS</h3>
+        <table>
+          <tr>
+            <th>Type</th>
+            <th>Meaning</th>
+            <th>Use Case</th>
+          </tr>
+          <tr>
+            <td>Inline CSS</td>
+            <td>Style directly HTML tag ke andar likhte hain.</td>
+            <td>Small testing ke liye, professional project mein avoid karna better.</td>
+          </tr>
+          <tr>
+            <td>Internal CSS</td>
+            <td>HTML file ke head mein style tag ke andar CSS likhte hain.</td>
+            <td>Single page demo ke liye useful.</td>
+          </tr>
+          <tr>
+            <td>External CSS</td>
+            <td>Separate CSS file banakar HTML se connect karte hain.</td>
+            <td>Professional projects ke liye best.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="connect">
+        <h2>2. CSS File Ko HTML Se Connect Karna</h2>
+        <p>External CSS use karne ke liye HTML file ke head section mein link tag add karna hota hai. Browser jab HTML read karta hai, toh link tag ke through CSS file load karta hai and styles apply karta hai.</p>
+
+        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+
+        <h3>Line-by-Line Explanation</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Detailed Explanation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;link&gt;</code></td>
+            <td>External resource connect karne ke liye use hota hai. CSS file, favicon, fonts jaise resources connect karne mein link tag useful hai.</td>
+          </tr>
+          <tr>
+            <td><code>rel="stylesheet"</code></td>
+            <td>Browser ko batata hai ki linked file stylesheet hai. Matlab browser is file ko design rules ke form mein read karega.</td>
+          </tr>
+          <tr>
+            <td><code>href="styles.css"</code></td>
+            <td>CSS file ka path hai. Agar HTML and CSS same folder mein hain toh direct file name likhte hain. File name mismatch hua toh CSS apply nahi hogi.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="syntax">
+        <h2>3. CSS Syntax</h2>
+        <p>CSS syntax three main parts se milkar banta hai: selector, property, and value. Selector batata hai kis HTML element ko style karna hai. Property batati hai kaunsi style change karni hai. Value batati hai us property ki setting kya hogi.</p>
+
+        <pre><code>h1 {
+  color: blue;
+  font-size: 36px;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>h1</code></td>
+            <td>Selector hai. Iska matlab page ke saare h1 headings par yeh CSS apply hogi.</td>
+          </tr>
+          <tr>
+            <td><code>{</code></td>
+            <td>Declaration block start karta hai. Iske andar CSS rules likhe jaate hain.</td>
+          </tr>
+          <tr>
+            <td><code>color: blue;</code></td>
+            <td>Text color blue set karta hai. `color` property hai and `blue` value hai.</td>
+          </tr>
+          <tr>
+            <td><code>font-size: 36px;</code></td>
+            <td>Heading ka font size 36 pixels set karta hai. Semicolon rule end karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>}</code></td>
+            <td>CSS declaration block close karta hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="selectors">
+        <h2>4. Selectors</h2>
+        <p>CSS selectors decide karte hain ki style kis HTML element par apply hogi. Agar selector galat hai, CSS likhne ke baad bhi design apply nahi hoga. Isliye selector samajhna CSS ka foundation hai.</p>
+
+        <div class="topic-grid">
+          <div class="topic-card">
+            <h4>Element Selector</h4>
+            <p><code>p</code>, <code>h1</code>, <code>body</code> jaise selectors direct HTML tags ko target karte hain.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Class Selector</h4>
+            <p><code>.card</code>, <code>.button</code> jaise selectors class attribute wale elements ko target karte hain. Most reusable option.</p>
+          </div>
+          <div class="topic-card">
+            <h4>ID Selector</h4>
+            <p><code>#hero</code> jaise selectors unique ID wale element ko target karte hain. ID page mein unique honi chahiye.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Pseudo-class</h4>
+            <p><code>:hover</code> jaise selectors special state target karte hain. Example: mouse hover hone par button color change.</p>
+          </div>
+        </div>
+
+        <pre><code>p {
+  color: #475569;
+}
+
+.section-title {
+  color: #1d4ed8;
+}
+
+#main-heading {
+  color: #0f172a;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}</code></pre>
+
+        <h3>Code Explanation</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>p</code></td>
+            <td>Page ke saare paragraph tags ko target karta hai. Common text styling ke liye useful.</td>
+          </tr>
+          <tr>
+            <td><code>.section-title</code></td>
+            <td>Class selector hai. Jis element par class section-title hogi, us par yeh style apply hogi.</td>
+          </tr>
+          <tr>
+            <td><code>#main-heading</code></td>
+            <td>ID selector hai. Specific unique element target karta hai. ID ka use limited rakhna best hai.</td>
+          </tr>
+          <tr>
+            <td><code>.nav-links a:hover</code></td>
+            <td>Nav links ke hover state ko target karta hai. Jab user mouse link par le jaata hai, tab color change hota hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="specificity">
+        <h2>5. Specificity</h2>
+        <p>Specificity ka matlab hai CSS priority. Agar ek hi element par multiple CSS rules apply ho rahe hain, toh browser decide karta hai kaunsa rule stronger hai. Simple priority order: inline style, ID selector, class selector, element selector.</p>
+
+        <pre><code>p {
+  color: black;
+}
+
+.highlight {
+  color: blue;
+}
+
+#special-text {
+  color: red;
+}</code></pre>
+
+        <p>Agar ek paragraph par class <code>highlight</code> bhi hai and id <code>special-text</code> bhi hai, toh red color apply hoga because ID selector class selector se stronger hota hai.</p>
+      </section>
+
+      <section id="box-model">
+        <h2>6. Box Model and Layout Concepts</h2>
+        <p>CSS box model har element ko ek rectangular box ki tarah treat karta hai. Har box ke andar content, padding, border, and margin hota hai. Content actual text/image area hai. Padding content ke andar ka space hai. Border box ke around line hai. Margin element ke bahar ka space hai.</p>
+
+        <pre><code>.card {
+  background: white;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>.card</code></td>
+            <td>Card class wale elements ko target karta hai. Business website mein service cards ke liye use hoga.</td>
+          </tr>
+          <tr>
+            <td><code>padding: 24px;</code></td>
+            <td>Card ke andar content ke around space add karta hai, text chipka hua nahi dikhta.</td>
+          </tr>
+          <tr>
+            <td><code>border</code></td>
+            <td>Card ke around light line create karta hai, card boundary visible hoti hai.</td>
+          </tr>
+          <tr>
+            <td><code>margin-bottom</code></td>
+            <td>Card ke bahar neeche space add karta hai, next element se distance banata hai.</td>
+          </tr>
+          <tr>
+            <td><code>border-radius</code></td>
+            <td>Card corners rounded banata hai. Modern UI mein soft corners professional lagte hain.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="flexbox">
+        <h2>7. Flexbox Layout System</h2>
+        <p>Flexbox one-dimensional layout system hai. Iska matlab flexbox ek direction mein layout control karne ke liye best hai: row ya column. Navbar, button groups, hero actions, and alignment ke liye flexbox bahut useful hai.</p>
+
+        <pre><code>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>display: flex;</code></td>
+            <td>Parent container ko flex layout bana deta hai. Child elements row mein arrange ho jaate hain by default.</td>
+          </tr>
+          <tr>
+            <td><code>justify-content: space-between;</code></td>
+            <td>Horizontal direction mein first item left and last item right side push hota hai. Logo left, nav right.</td>
+          </tr>
+          <tr>
+            <td><code>align-items: center;</code></td>
+            <td>Items vertically center align hote hain. Navbar clean and balanced dikhta hai.</td>
+          </tr>
+          <tr>
+            <td><code>gap: 24px;</code></td>
+            <td>Flex items ke beech consistent spacing add karta hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="grid">
+        <h2>8. CSS Grid Layout System</h2>
+        <p>CSS Grid two-dimensional layout system hai. Grid rows and columns dono manage kar sakta hai. Services section, gallery, pricing cards, dashboard, and page layout ke liye grid very powerful hai.</p>
+
+        <pre><code>.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>display: grid;</code></td>
+            <td>Container ko grid layout mein convert karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>grid-template-columns</code></td>
+            <td>Grid ke columns define karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>repeat(3, 1fr)</code></td>
+            <td>3 equal columns create karta hai. `1fr` available space ka equal fraction hota hai.</td>
+          </tr>
+          <tr>
+            <td><code>gap: 24px;</code></td>
+            <td>Cards ke rows and columns ke beech spacing add karta hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="responsive">
+        <h2>9. Responsive Design Principles</h2>
+        <p>Responsive design ka matlab website desktop, tablet, and mobile sab par properly dikhe. Responsive website mein text readable hota hai, images overflow nahi karti, cards mobile par stack ho jaate hain, and user ko horizontal scroll nahi milta.</p>
+
+        <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>max-width: 100%;</code></td>
+            <td>Image parent container se bahar nahi niklegi. Mobile par image shrink ho sakti hai.</td>
+          </tr>
+          <tr>
+            <td><code>height: auto;</code></td>
+            <td>Image ratio maintain karta hai. Image stretch nahi hoti.</td>
+          </tr>
+          <tr>
+            <td><code>width: min(1120px, 92%);</code></td>
+            <td>Desktop par max 1120px width, small screen par 92% width. Yeh responsive container pattern hai.</td>
+          </tr>
+          <tr>
+            <td><code>margin: 0 auto;</code></td>
+            <td>Container ko center align karta hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="media">
+        <h2>10. Media Queries</h2>
+        <p>Media query screen size ke according CSS change karne ka method hai. Example: desktop par 3 cards ek row mein, mobile par cards one-by-one. Media queries responsive design ka core part hain.</p>
+
+        <pre><code>@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>@media (max-width: 768px)</code></td>
+            <td>Yeh CSS sirf tab apply hogi jab screen width 768px ya usse kam hogi.</td>
+          </tr>
+          <tr>
+            <td><code>flex-direction: column;</code></td>
+            <td>Navbar items row se column mein aa jaate hain. Mobile menu readable hota hai.</td>
+          </tr>
+          <tr>
+            <td><code>grid-template-columns: 1fr;</code></td>
+            <td>Services grid mobile par one-column layout ban jaati hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="animation">
+        <h2>11. Animations and Transitions</h2>
+        <p>Transition style change ko smooth banata hai. Example: button hover par color suddenly change hone ke bajay smoothly change ho. Animation keyframes ke through repeated ya staged movement create karta hai. Module 3 mein hum simple hover transitions use karenge.</p>
+
+        <pre><code>.button {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>transition</code></td>
+            <td>Hover par transform and background change smooth bana deta hai.</td>
+          </tr>
+          <tr>
+            <td><code>.button:hover</code></td>
+            <td>Button par mouse hover hone par yeh style apply hota hai.</td>
+          </tr>
+          <tr>
+            <td><code>translateY(-2px)</code></td>
+            <td>Button ko thoda upar move karta hai. Interactive feel aata hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="performance">
+        <h2>12. CSS Performance and Best Practices</h2>
+        <p>Good CSS sirf beautiful nahi, maintainable bhi hota hai. Agar CSS random likha gaya, future mein change karna difficult ho jaata hai. Professional CSS mein reusable classes, consistent spacing, limited colors, clean naming, and responsive testing important hote hain.</p>
+
+        <ul>
+          <li>External CSS file use karo.</li>
+          <li>Class names meaningful rakho.</li>
+          <li>Repeated styles ke liye reusable classes banao.</li>
+          <li>Too many colors and fonts avoid karo.</li>
+          <li>Mobile view hamesha test karo.</li>
+          <li>Unused CSS remove karo.</li>
+          <li>Specificity unnecessarily high mat karo.</li>
+        </ul>
+      </section>
+
+      <section id="project">
+        <h2>Project 3: Responsive Business Website</h2>
+        <p>Is project mein learner same HTML project ko CSS ke help se ek responsive business website mein convert karega. Website ka example business name hai BrightWeb Studio. Is website mein header, navbar, hero section, services cards, CTA button, hover effects, and mobile responsive layout hoga.</p>
+
+        <div class="project-preview">
+          <div>
+            <h3>BrightWeb Studio</h3>
+            <p>We build clean and responsive websites for growing businesses.</p>
+            <a class="button-demo" href="#final-code">View Final Code</a>
+          </div>
+          <div class="preview-card">
+            <h3>Project Features</h3>
+            <ul>
+              <li>Desktop and mobile responsive layout</li>
+              <li>Clean typography and spacing</li>
+              <li>Flexbox navbar</li>
+              <li>CSS Grid service cards</li>
+              <li>Modern color scheme</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-code">
+        <h2>Final Project 3 Code</h2>
+        <p>Create two files: <code>index.html</code> and <code>styles.css</code>. The HTML gives structure and the CSS gives design.</p>
+
+        <h3>Final HTML Code: index.html</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;BrightWeb Studio&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container navbar"&gt;
+      &lt;h1 class="logo"&gt;BrightWeb Studio&lt;/h1&gt;
+
+      &lt;nav class="nav-links" aria-label="Main navigation"&gt;
+        &lt;a href="index.html"&gt;Home&lt;/a&gt;
+        &lt;a href="about.html"&gt;About&lt;/a&gt;
+        &lt;a href="projects.html"&gt;Services&lt;/a&gt;
+        &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container hero-grid"&gt;
+        &lt;div&gt;
+          &lt;p class="eyebrow"&gt;Modern Web Solutions&lt;/p&gt;
+          &lt;h2&gt;We build clean and responsive websites for growing businesses.&lt;/h2&gt;
+          &lt;p class="hero-text"&gt;Our team creates fast, accessible, and mobile-friendly websites using HTML5 and CSS3.&lt;/p&gt;
+          &lt;a class="button" href="contact.html"&gt;Start Your Project&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="hero-card"&gt;
+          &lt;h3&gt;Why Choose Us?&lt;/h3&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Responsive design&lt;/li&gt;
+            &lt;li&gt;Clean code structure&lt;/li&gt;
+            &lt;li&gt;SEO-friendly pages&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="services-section"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2 class="section-title"&gt;Our Services&lt;/h2&gt;
+        &lt;div class="services-grid"&gt;
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;Website Design&lt;/h3&gt;
+            &lt;p&gt;We design clean and user-friendly business websites.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;Responsive Layout&lt;/h3&gt;
+            &lt;p&gt;Your website will work properly on desktop, tablet, and mobile.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;SEO Structure&lt;/h3&gt;
+            &lt;p&gt;We use semantic HTML and clean structure for better search visibility.&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>Important HTML Lines Explanation</h3>
+        <table>
+          <tr>
+            <th>Line / Code</th>
+            <th>Detailed Explanation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            <td>HTML page ko external CSS file se connect karta hai. Iske bina styles.css ka design page par apply nahi hoga.</td>
+          </tr>
+          <tr>
+            <td><code>class="container navbar"</code></td>
+            <td>Same element par two classes hain. Container width control karega, navbar flexbox alignment control karega.</td>
+          </tr>
+          <tr>
+            <td><code>class="hero-grid"</code></td>
+            <td>Hero section ke text and card ko grid layout mein arrange karne ke liye class use hoti hai.</td>
+          </tr>
+          <tr>
+            <td><code>class="services-grid"</code></td>
+            <td>Service cards ko CSS Grid se 3-column layout mein arrange karne ke liye class.</td>
+          </tr>
+          <tr>
+            <td><code>class="service-card"</code></td>
+            <td>Har service article ko card design dene ke liye class. CSS se background, border, shadow, padding apply hogi.</td>
+          </tr>
+        </table>
+
+        <h3>Final CSS Code: styles.css</h3>
+        <pre><code>* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  color: #1d4ed8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-weight: 700;
+  color: #334155;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+}
+
+.hero-text {
+  font-size: 18px;
+  color: #475569;
+  max-width: 640px;
+}
+
+.button {
+  display: inline-block;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.hero-card,
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.services-section {
+  padding: 72px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  margin: 0 0 24px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+
+        <h3>Important CSS Lines Explanation</h3>
+        <table>
+          <tr>
+            <th>CSS Line</th>
+            <th>Detailed Explanation</th>
+          </tr>
+          <tr>
+            <td><code>* { box-sizing: border-box; }</code></td>
+            <td>All elements ke width calculation ko predictable banata hai. Padding and border width ke andar count hote hain.</td>
+          </tr>
+          <tr>
+            <td><code>.container</code></td>
+            <td>Website content ko max width deta hai and center align karta hai. Professional websites mein content full screen stretch nahi hota.</td>
+          </tr>
+          <tr>
+            <td><code>.navbar { display: flex; }</code></td>
+            <td>Navbar items ko flex layout mein arrange karta hai. Logo and links clean alignment mein dikhte hain.</td>
+          </tr>
+          <tr>
+            <td><code>.hero-grid { display: grid; }</code></td>
+            <td>Hero section ko columns mein divide karta hai. Left text, right card layout create hota hai.</td>
+          </tr>
+          <tr>
+            <td><code>.services-grid</code></td>
+            <td>Services cards ko grid mein arrange karta hai. Desktop par 3 columns, mobile par media query se 1 column.</td>
+          </tr>
+          <tr>
+            <td><code>@media (max-width: 768px)</code></td>
+            <td>Mobile/tablet screen ke liye special CSS rules apply karta hai. Responsive design ka main part.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="checklist">
+        <h2>Project 3 Checklist</h2>
+        <table class="checklist">
+          <tr>
+            <th>Requirement</th>
+            <th>Done</th>
+          </tr>
+          <tr><td>CSS syntax explained</td><td></td></tr>
+          <tr><td>Selectors and specificity covered</td><td></td></tr>
+          <tr><td>Box model explained with card example</td><td></td></tr>
+          <tr><td>Flexbox navbar used</td><td></td></tr>
+          <tr><td>CSS Grid services layout used</td><td></td></tr>
+          <tr><td>Responsive design principles covered</td><td></td></tr>
+          <tr><td>Media query added</td><td></td></tr>
+          <tr><td>Transitions and hover effects added</td><td></td></tr>
+          <tr><td>CSS performance and best practices explained</td><td></td></tr>
+          <tr><td>Project 3 responsive business website included</td><td></td></tr>
+        </table>
+
+        <h3>Final Summary</h3>
+        <p>Module 3 mein learner ne CSS3 ke help se HTML website ko professional responsive business website mein convert karna seekha. Learner ne CSS syntax, selectors, specificity, box model, Flexbox, Grid, responsive design, media queries, transitions, and best practices practically use kiye.</p>
+        <p>Sabse important learning yeh hai ki CSS website ko sirf beautiful nahi banata, balki readable, usable, responsive, and professional banata hai. Flexbox alignment ke liye powerful hai. Grid cards and complex layouts ke liye useful hai. Media queries website ko mobile-friendly banati hain.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      Module 3 CSS3 Styling and Responsive Design Notes
+    </div>
+  </footer>
+</body>
+</html>
