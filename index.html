@@ -85,6 +85,161 @@
         </tr>
       </table>
 
+      <h1>Before Chapter 1: VS Code Mein CSS Start Kaise Karein</h1>
+      <p>CSS padhne se pehle learner ko yeh practical setup karna chahiye. Isse har chapter ka code directly implement karke output dekha jaa sakta hai. Agar setup clear hoga, toh CSS ke concepts sirf theory nahi rahenge, balki live browser output mein samajh aayenge.</p>
+
+      <h2>Step-by-Step Setup</h2>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Action</th>
+          <th>Why This Step Is Important</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Desktop ya Documents mein ek folder banao: <code>css-practice</code>.</td>
+          <td>Yeh folder hamara practice project hoga. HTML and CSS files isi ke andar rahengi.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>VS Code open karo and <code>File &gt; Open Folder</code> se <code>css-practice</code> open karo.</td>
+          <td>VS Code ko project folder ka context milta hai. Files create and manage karna easy hota hai.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>New file create karo: <code>index.html</code>.</td>
+          <td>Is file mein HTML structure hoga jisko CSS style karegi.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>New file create karo: <code>styles.css</code>.</td>
+          <td>Is file mein saare CSS rules likhenge. External CSS professional approach hai.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><code>index.html</code> ke <code>&lt;head&gt;</code> mein CSS link add karo.</td>
+          <td>Is link ke bina browser CSS file load nahi karega.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Browser mein <code>index.html</code> open karo.</td>
+          <td>Output dekhkar verify hoga ki HTML and CSS properly connect hain.</td>
+        </tr>
+      </table>
+
+      <h2>Starter HTML Code</h2>
+      <p>Is code ko <code>index.html</code> mein paste karo. Yeh small starter page hai jisme heading, paragraph, and button hai. Hum CSS se isi ko style karke test karenge.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;CSS Practice&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;section class="practice-card"&gt;
+    &lt;h1&gt;Learning CSS3&lt;/h1&gt;
+    &lt;p&gt;CSS makes web pages beautiful and responsive.&lt;/p&gt;
+    &lt;a class="practice-button" href="#"&gt;Start Learning&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h2>Starter HTML Code Explanation</h2>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Detailed Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>HTML page ko <code>styles.css</code> file se connect karta hai. Yeh line sabse important hai because CSS isi se apply hogi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section class="practice-card"&gt;</code></td>
+          <td>Section ko class di gayi hai. CSS mein <code>.practice-card</code> selector se is section ko card design denge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a class="practice-button"&gt;</code></td>
+          <td>Anchor link ko class di gayi hai. CSS se is normal link ko button jaisa style denge.</td>
+        </tr>
+      </table>
+
+      <h2>Starter CSS Code</h2>
+      <p>Is code ko <code>styles.css</code> mein paste karo. Isse learner immediately dekh paayega ki CSS kaise page ka look change karti hai.</p>
+      <pre><code>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.practice-card {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #dbe2ef;
+  border-radius: 8px;
+}
+
+.practice-button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}</code></pre>
+
+      <h2>Starter CSS Code Explanation</h2>
+      <table>
+        <tr>
+          <th>CSS Code</th>
+          <th>Detailed Explanation</th>
+        </tr>
+        <tr>
+          <td><code>body</code></td>
+          <td>Complete page ko target karta hai. Isme page ka default font, background, and text color set hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 0;</code></td>
+          <td>Browser ka default margin remove karta hai. Isse layout ka control hamare paas aata hai.</td>
+        </tr>
+        <tr>
+          <td><code>.practice-card</code></td>
+          <td>HTML mein jahan <code>class="practice-card"</code> diya hai, us section ko style karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>max-width: 600px;</code></td>
+          <td>Card ko maximum 600px wide rakhta hai. Large screen par card zyada stretch nahi hota.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 60px auto;</code></td>
+          <td>Card ke top-bottom mein 60px space deta hai and left-right auto se card center hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>padding: 30px;</code></td>
+          <td>Card ke andar content ke around space add karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.practice-button</code></td>
+          <td>Normal link ko button look deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>display: inline-block;</code></td>
+          <td>Anchor tag ko button jaisa box behavior deta hai, jisse padding properly apply hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>text-decoration: none;</code></td>
+          <td>Link ka default underline remove karta hai.</td>
+        </tr>
+      </table>
+
+      <h2>Starter Output Check</h2>
+      <p>Browser mein output open karne par center mein white card dikhna chahiye. Card ke andar heading, paragraph, and blue button dikhna chahiye. Agar design apply nahi ho raha, toh sabse pehle check karo: CSS file ka naam <code>styles.css</code> hai ya nahi, HTML mein link tag correct hai ya nahi, and dono files same folder mein hain ya nahi.</p>
+
       <h1>Chapter 1: CSS Introduction</h1>
       <p>CSS ka full form hai Cascading Style Sheets. CSS ka kaam HTML elements ko style karna hota hai. HTML batata hai page par kya content hai, aur CSS batata hai woh content kaisa dikhega. Example: heading ka color kya hoga, paragraph ka font size kya hoga, button ka background kya hoga, cards side-by-side honge ya one-by-one, mobile par layout kaise adjust hoga, ye sab CSS se hota hai.</p>
       <p>Real-world example: HTML ek ghar ka structure hai, aur CSS us ghar ka paint, decoration, furniture arrangement, and lighting hai. Sirf structure se ghar complete nahi lagta. Design add karne ke baad woh usable and attractive lagta hai.</p>
@@ -484,6 +639,51 @@
         </tr>
       </table>
 
+      <h2>VS Code Mein Step-by-Step Implementation</h2>
+      <p>Is project ko implement karne ke liye VS Code use karenge. Pehle folder create hoga, phir HTML file, phir CSS file. HTML structure dega, CSS design dega. Dono files same folder mein honi chahiye taaki <code>href="styles.css"</code> properly work kare.</p>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Action</th>
+          <th>Explanation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Desktop ya Documents mein <code>business-website</code> folder banao.</td>
+          <td>Yeh project ka main folder hoga. Saari files isi folder ke andar rahengi.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>VS Code open karo and <code>File &gt; Open Folder</code> se folder open karo.</td>
+          <td>VS Code ko project folder ke andar ka structure dikh jaayega.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>New file banao: <code>index.html</code>.</td>
+          <td>Is file mein website ka HTML structure likhenge.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>New file banao: <code>styles.css</code>.</td>
+          <td>Is file mein website ki styling likhenge.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>HTML code <code>index.html</code> mein paste karo.</td>
+          <td>Website ka header, hero section, services cards structure ready hoga.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>CSS code <code>styles.css</code> mein paste karo.</td>
+          <td>Website ko color, spacing, layout, responsiveness, and hover effects milenge.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Files save karo and browser mein <code>index.html</code> open karo.</td>
+          <td>Final responsive website output dikhega.</td>
+        </tr>
+      </table>
+
       <h2>Final HTML Code</h2>
       <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -548,6 +748,82 @@
   &lt;/main&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+
+      <h2>HTML Code Detailed Explanation</h2>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Detailed Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          <td>Browser ko batata hai ki document HTML5 standard follow kar raha hai. Isko top par likhna best practice hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html lang="en"&gt;</code></td>
+          <td>HTML document ka root element hai. <code>lang="en"</code> page language English set karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+          <td>Text encoding set karta hai. Isse symbols and text properly show hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta name="viewport"...&gt;</code></td>
+          <td>Responsive design ke liye important hai. Browser ko device width ke according page scale karne ko bolta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>HTML file ko external CSS file se connect karta hai. Agar yeh line missing hogi toh CSS apply nahi hogi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;header class="site-header"&gt;</code></td>
+          <td>Website ka top area start karta hai. <code>site-header</code> class se CSS header ko style karega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container navbar"&gt;</code></td>
+          <td>Same div par two classes hain. <code>container</code> content width control karega, <code>navbar</code> Flexbox layout dega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1 class="logo"&gt;BrightWeb Studio&lt;/h1&gt;</code></td>
+          <td>Website ka brand name hai. <code>logo</code> class se color and spacing style milega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;nav class="nav-links"&gt;</code></td>
+          <td>Navigation links ka group hai. <code>nav-links</code> class links ko Flexbox se arrange karegi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section class="hero"&gt;</code></td>
+          <td>Website ka main intro section hai. Hero section user ko website ka main message dikhata hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container hero-grid"&gt;</code></td>
+          <td>Hero content ko controlled width and Grid layout deta hai. Text left side and card right side arrange hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p class="eyebrow"&gt;</code></td>
+          <td>Small highlighted label ke liye use hota hai. CSS isko uppercase and blue style dega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a class="button" href="#"&gt;</code></td>
+          <td>Normal link ko button jaisa design dene ke liye <code>button</code> class use hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="hero-card"&gt;</code></td>
+          <td>Hero section ka right side card hai. CSS isko white background, border, padding, shadow dega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section class="services"&gt;</code></td>
+          <td>Services section start karta hai. Isme business ke services cards honge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="services-grid"&gt;</code></td>
+          <td>Services cards ko Grid layout mein arrange karne ke liye wrapper hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;article class="service-card"&gt;</code></td>
+          <td>Har service ek independent card hai. <code>service-card</code> class se card design apply hoga.</td>
+        </tr>
+      </table>
 
       <h2>Final CSS Code</h2>
       <pre><code>* {
@@ -677,6 +953,122 @@ a {
   }
 }</code></pre>
 
+      <h2>CSS Code Detailed Explanation</h2>
+      <table>
+        <tr>
+          <th>CSS Code</th>
+          <th>Detailed Explanation</th>
+        </tr>
+        <tr>
+          <td><code>* { box-sizing: border-box; }</code></td>
+          <td>Universal selector saare elements ko target karta hai. <code>border-box</code> padding and border ko width ke andar count karta hai, layout predictable hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>body</code></td>
+          <td>Complete page ke base styles set karta hai: margin remove, font, text color, background, and line-height.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 0;</code></td>
+          <td>Browser ka default body margin remove karta hai. Page spacing hum CSS se control karte hain.</td>
+        </tr>
+        <tr>
+          <td><code>font-family: Arial, sans-serif;</code></td>
+          <td>Website ka font set karta hai. Arial available na ho toh browser sans-serif font use karega.</td>
+        </tr>
+        <tr>
+          <td><code>line-height: 1.6;</code></td>
+          <td>Text lines ke beech readable spacing deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>a { color: inherit; text-decoration: none; }</code></td>
+          <td>Links ka default blue color and underline remove karta hai. Links parent color inherit karte hain.</td>
+        </tr>
+        <tr>
+          <td><code>.container</code></td>
+          <td>Content ko max width and center alignment deta hai. Isse page wide screen par zyada spread nahi hota.</td>
+        </tr>
+        <tr>
+          <td><code>width: min(1120px, 92%);</code></td>
+          <td>Desktop par width max 1120px hogi, mobile par 92% screen width use hogi.</td>
+        </tr>
+        <tr>
+          <td><code>.site-header</code></td>
+          <td>Header ko white background and bottom border deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.navbar</code></td>
+          <td>Navigation area ko Flexbox layout deta hai. Logo and links ek row mein align hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>justify-content: space-between;</code></td>
+          <td>Logo ko left side and links ko right side push karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>align-items: center;</code></td>
+          <td>Navbar items vertically center align karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.nav-links</code></td>
+          <td>Navigation links ko row mein arrange karta hai and gap add karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.nav-links a:hover</code></td>
+          <td>Mouse hover hone par link color blue hota hai. Yeh transition/interaction ka simple example hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero</code></td>
+          <td>Hero section ko top-bottom padding and gradient background deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero-grid</code></td>
+          <td>Hero section ke text and card ko CSS Grid se two columns mein arrange karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: 1.3fr 0.7fr;</code></td>
+          <td>Left column right column se wider hota hai. Text area zyada space leta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.eyebrow</code></td>
+          <td>Small label ko blue, bold, uppercase style deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.button</code></td>
+          <td>Normal anchor link ko button design deta hai: background, color, padding, rounded corners, bold text.</td>
+        </tr>
+        <tr>
+          <td><code>transition</code></td>
+          <td>Hover effects ko smooth banata hai. Button ka movement sudden nahi lagega.</td>
+        </tr>
+        <tr>
+          <td><code>.button:hover</code></td>
+          <td>Mouse hover hone par button dark blue hota hai and thoda upar move hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero-card, .service-card</code></td>
+          <td>Group selector hai. Hero card and service cards ko same card style milti hai.</td>
+        </tr>
+        <tr>
+          <td><code>box-shadow</code></td>
+          <td>Card ke neeche soft shadow add karta hai. Card page se thoda elevated dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.services-grid</code></td>
+          <td>Services cards ko CSS Grid layout mein arrange karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>repeat(3, 1fr)</code></td>
+          <td>Desktop par 3 equal columns create karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>@media (max-width: 768px)</code></td>
+          <td>Mobile/tablet screen ke liye CSS rules start karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: 1fr;</code></td>
+          <td>Mobile par hero and services grid ko one-column layout mein convert karta hai.</td>
+        </tr>
+      </table>
+
       <h2>How to Run Project</h2>
       <ol>
         <li>Ek folder banao: <code>business-website</code>.</li>
@@ -688,6 +1080,83 @@ a {
         <li>Desktop layout check karo.</li>
         <li>Browser resize karke mobile layout check karo.</li>
       </ol>
+
+      <h2>VS Code Implementation Detail</h2>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>VS Code Action</th>
+          <th>What Learner Should See</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>VS Code open karo.</td>
+          <td>Empty VS Code window open hogi.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><code>File &gt; Open Folder</code> par click karo and <code>business-website</code> folder select karo.</td>
+          <td>Left side Explorer mein project folder dikhega.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Explorer mein New File icon se <code>index.html</code> banao.</td>
+          <td>HTML file create hogi jisme structure code paste karna hai.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>New File icon se <code>styles.css</code> banao.</td>
+          <td>CSS file create hogi jisme design code paste karna hai.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><code>index.html</code> mein HTML code paste karke save karo.</td>
+          <td>Browser ko page structure milega: header, hero, services.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><code>styles.css</code> mein CSS code paste karke save karo.</td>
+          <td>Browser ko design rules milenge: colors, spacing, layout.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><code>index.html</code> file ko browser mein open karo.</td>
+          <td>Final responsive business website visible hogi.</td>
+        </tr>
+      </table>
+
+      <h2>Expected Output</h2>
+      <p>Desktop screen par top mein clean white header dikhega. Left side <code>BrightWeb Studio</code> logo hoga and right side navigation links honge. Hero section mein left side text and button hoga, right side card hoga. Services section mein 3 cards ek row mein dikhenge.</p>
+      <p>Mobile screen par navbar vertical ho jayega. Hero section one-column layout mein aa jayega. Services cards one-by-one stack honge. Button hover karne par button thoda upar move hoga and color dark blue ho jayega.</p>
+
+      <h2>Common Mistakes and Fixes</h2>
+      <table>
+        <tr>
+          <th>Mistake</th>
+          <th>Reason</th>
+          <th>Fix</th>
+        </tr>
+        <tr>
+          <td>CSS apply nahi ho rahi</td>
+          <td>CSS file linked nahi hai ya file name galat hai.</td>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code> check karo and file name same rakho.</td>
+        </tr>
+        <tr>
+          <td>Navbar align nahi ho raha</td>
+          <td><code>navbar</code> class missing hai ya CSS selector wrong hai.</td>
+          <td>HTML mein <code>class="container navbar"</code> and CSS mein <code>.navbar</code> check karo.</td>
+        </tr>
+        <tr>
+          <td>Cards 3 columns mein nahi aa rahe</td>
+          <td><code>services-grid</code> class missing hai.</td>
+          <td>Services wrapper par <code>class="services-grid"</code> add karo.</td>
+        </tr>
+        <tr>
+          <td>Mobile layout break ho raha</td>
+          <td>Media query missing ya wrong hai.</td>
+          <td><code>@media (max-width: 768px)</code> section check karo.</td>
+        </tr>
+      </table>
 
       <h1>Quick Reference Cheatsheet</h1>
       <table>

@@ -34,6 +34,18 @@ Simple Hinglish notes with practical examples and detailed code explanation.
 
 Open `index.html` in browser.
 
+## Implementation Flow
+
+Notes ke starting part mein VS Code setup diya gaya hai:
+
+1. `css-practice` folder create karo.
+2. `index.html` file create karo.
+3. `styles.css` file create karo.
+4. HTML file ko CSS se link karo.
+5. Starter HTML and CSS run karke output check karo.
+6. Phir chapters ke concepts one by one implement karo.
+7. Last mein Project 3 responsive business website build karo.
+
 ## Deployment
 
 This folder is GitHub Pages ready because `index.html` is available at root level.
