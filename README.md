@@ -2,6 +2,12 @@
 
 Simple Hinglish notes for learners.
 
+## Main Idea
+
+Ye notes Module 2 wale same portfolio project ko continue karte hain. Module 2 mein learner ne HTML5 se portfolio structure banaya tha. Module 3 mein learner usi portfolio ko CSS3 se style karega.
+
+Goal ye hai ki student portfolio bhi build kare aur CSS topics bhi practical way mein samjhe.
+
 ## Topics Covered
 
 - CSS Syntax, Selectors and Specificity
@@ -12,19 +18,21 @@ Simple Hinglish notes for learners.
 - Media Queries
 - Animations and Transitions
 - CSS Performance and Best Practices
-- Project 3: Responsive Business Website
 
-## Project 3 Output
+## Project Output
 
-Learner will build a responsive business website using HTML and CSS.
+Learner will upgrade the same portfolio website using CSS.
 
-Project features:
+Portfolio improvements:
 
-- Desktop and mobile responsive layout
 - Clean typography and spacing
+- Styled header and navigation
 - Flexbox based navbar
-- CSS Grid based services section
-- Modern color scheme
+- CSS Grid based project cards
+- Styled hero section
+- Styled profile card
+- Styled contact form
+- Responsive desktop and mobile layout
 - Hover transitions
 - Mobile layout using media queries
 
@@ -32,29 +40,24 @@ Project features:
 
 | File | Purpose |
 |---|---|
-| `index.html` | Complete Module 3 notes website |
+| `index.html` | Complete Module 3 teaching notes website |
 | `styles.css` | Styling for the notes website |
 
 ## How to Open
 
 Open `index.html` in browser.
 
-## How to Deploy on GitHub Pages
+## How to Use in Class
 
-1. Push this folder to a GitHub repository.
-2. Go to repository Settings.
-3. Open Pages section.
-4. Select branch `main`.
-5. Select root folder.
-6. Save.
-7. GitHub Pages will serve `index.html`.
+1. First explain why CSS is needed after HTML.
+2. Show how to connect `styles.css`.
+3. Explain CSS syntax.
+4. Add classes to the same portfolio HTML.
+5. Apply CSS step by step.
+6. Explain every important CSS line.
+7. Resize browser and show responsive design.
+8. Complete final checklist.
 
-## Teaching Style
+## Deployment
 
-Every topic is explained in simple Hinglish with:
-
-- Theory
-- Practical code
-- Detailed code explanation
-- Project-based flow
-- Final checklist
+This repo is GitHub Pages ready because it has `index.html` at root level.
