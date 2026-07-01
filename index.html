@@ -65,6 +65,9 @@
       <h2>Project Goal</h2>
       <p>Hum ek responsive business website banayenge jiska naam hoga <strong>BrightWeb Studio</strong>. Is project mein top navbar, hero section, services section, about section, and contact CTA section hoga. Website desktop par wide and professional dikhegi, aur mobile par clean one-column layout mein adjust ho jayegi.</p>
       <p>Is project ka purpose hai ki learners sirf CSS properties yaad na karein, balki unko real website par implement karke samjhein. Har CSS topic final project ke kisi na kisi part mein use hoga.</p>
+      <p>CSS use karne ka main reason yeh hai ki HTML sirf structure deta hai. Agar hum sirf HTML likhenge, toh page par content toh aa jayega, lekin spacing, colors, alignment, cards, buttons, mobile layout, and professional look nahi aayega. CSS page ko readable banata hai, user ko important content par focus karne mein help karta hai, aur website ko brand jaisa feel deta hai.</p>
+      <p>Example ke liye, navbar bina CSS ke simple links ki line jaisa dikhega. CSS lagane ke baad same navbar mein logo left side, links right side, proper spacing, hover effect, and sticky header aa sakta hai. Isi tarah services plain paragraphs ke form mein dikh sakti hain, lekin CSS Grid and card styling se woh professional service cards ban jaati hain.</p>
+      <div class="note">Teaching point: Learners ko pehle plain HTML output dikhao, phir CSS apply karke same page ka styled output dikhao. Is visual comparison se CSS ka purpose instantly clear hota hai.</div>
 
       <h2>Step 1: VS Code Setup</h2>
       <p>Sabse pehle project folder create karna hai. Is folder ke andar HTML and CSS files rahengi.</p>
@@ -191,35 +194,35 @@
         </tr>
         <tr>
           <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
-          <td>HTML file ko CSS file se connect karta hai. Agar yeh line missing hogi toh styling apply nahi hogi.</td>
+          <td>Yeh line HTML file ko external CSS file se connect karti hai. Browser jab <code>index.html</code> load karta hai, toh is line ki wajah se <code>styles.css</code> file bhi load hoti hai. Agar yeh line missing ho, ya file name wrong ho, toh HTML content browser mein dikh jaayega but styling apply nahi hogi. Isliye CSS project ka first checkpoint yahi line hoti hai.</td>
         </tr>
         <tr>
           <td><code>class="container navbar"</code></td>
-          <td>Same element par two classes hain. <code>container</code> width control karega, <code>navbar</code> Flexbox layout apply karega.</td>
+          <td>Same element par two classes use ki gayi hain. <code>container</code> class page content ko fixed readable width mein center rakhegi. <code>navbar</code> class usi div ke andar Flexbox layout apply karegi, jisse logo and navigation links proper row mein align honge. Ek element par multiple classes dena common professional practice hai.</td>
         </tr>
         <tr>
           <td><code>class="nav-links"</code></td>
-          <td>Navigation links ko target karne ke liye class. CSS se links ka gap, color, and hover style set hoga.</td>
+          <td>Yeh class navigation links ke group ko target karne ke liye hai. Iske andar Home, Services, About, Contact links hain. CSS mein <code>.nav-links</code> se links ko row mein arrange karenge, gap denge, and <code>.nav-links a:hover</code> se hover effect add karenge. Isse navigation clean and interactive lagega.</td>
         </tr>
         <tr>
           <td><code>class="hero"</code></td>
-          <td>Hero website ka first main section hota hai. CSS isko spacing and background dega.</td>
+          <td>Hero website ka first main visual section hota hai. User page open karte hi sabse pehle isi section ko dekhta hai. Is project mein hero section business ka main message, supporting text, button, and feature card dikhata hai. CSS se is section ko large padding, gradient background, and professional spacing milegi.</td>
         </tr>
         <tr>
           <td><code>class="hero-grid"</code></td>
-          <td>Hero section ke content ko Grid layout mein arrange karega: left text, right card.</td>
+          <td>Hero section ke andar content ko Grid layout mein arrange karne ke liye yeh class use hoti hai. Left side par heading, paragraph, and button hoga. Right side par <code>hero-card</code> hoga. CSS Grid ki help se desktop par two-column layout banega, aur media query ki help se mobile par one-column layout ban jayega.</td>
         </tr>
         <tr>
           <td><code>class="button"</code></td>
-          <td>Normal link ko button design dene ke liye class.</td>
+          <td>HTML mein yeh actual anchor link hai, but CSS se isko button jaisa design diya jayega. <code>button</code> class background color, white text, padding, border-radius, font-weight, and hover transition apply karegi. Isse call-to-action clear dikhega and user ko click karne ka signal milega.</td>
         </tr>
         <tr>
           <td><code>class="services-grid"</code></td>
-          <td>Services cards ko CSS Grid se columns mein arrange karne ke liye wrapper.</td>
+          <td>Services section ke cards ko CSS Grid se columns mein arrange karne ke liye yeh wrapper class hai. Desktop par 3 service cards ek row mein dikhenge. Mobile par media query <code>grid-template-columns: 1fr;</code> apply karegi, jisse cards one-by-one stack honge.</td>
         </tr>
         <tr>
           <td><code>class="service-card"</code></td>
-          <td>Each service ko card design dene ke liye class. CSS se padding, border, shadow, and hover effect milega.</td>
+          <td>Har service item ko card design dene ke liye yeh class use hoti hai. CSS se card ko white background, border, padding, rounded corners, and box-shadow milega. Hover par card thoda upar move hoga, jisse interactive and modern UI feel aayega.</td>
         </tr>
       </table>
 
@@ -391,71 +394,71 @@ a {
         </tr>
         <tr>
           <td><code>* { box-sizing: border-box; }</code></td>
-          <td>Universal selector saare elements par apply hota hai. <code>border-box</code> layout calculation ko easy banata hai because padding and border width ke andar count hote hain.</td>
+          <td>Universal selector page ke saare elements par apply hota hai. <code>box-sizing: border-box;</code> ka meaning hai ki element ki width calculate karte waqt padding and border bhi usi width ke andar count honge. Isse layout predictable hota hai. Beginner ke liye yeh important hai kyunki padding add karne par box unexpected bada nahi hota.</td>
         </tr>
         <tr>
           <td><code>body</code></td>
-          <td>Complete page ke base styles set karta hai: margin remove, font, color, background, and line-height.</td>
+          <td><code>body</code> complete webpage ko represent karta hai. Is rule ke andar hum page ka default margin, font, text color, background color, and line-height set karte hain. Body styling ek base layer jaisi hoti hai. Agar body clean set ho, toh baaki sections ko style karna easy ho jaata hai.</td>
         </tr>
         <tr>
           <td><code>a</code></td>
-          <td>All links ko target karta hai. Underline remove hoti hai and links parent color inherit karte hain.</td>
+          <td>Yeh selector page ke saare anchor links ko target karta hai. Default browser links blue and underlined hote hain. Business website mein hum links ko custom design dena chahte hain, isliye <code>color: inherit;</code> and <code>text-decoration: none;</code> use karte hain. Isse nav links and buttons clean dikhte hain.</td>
         </tr>
         <tr>
           <td><code>.container</code></td>
-          <td>Content ko center and max readable width mein rakhta hai. Desktop par content zyada spread nahi hota, mobile par 92% width use hoti hai.</td>
+          <td><code>.container</code> website ke content ko center and readable width mein rakhta hai. Large desktop screens par content full width mein stretch nahi hota. Mobile par 92% width use hoti hai, jisse left-right side mein thoda safe space bachta hai. Professional websites mein container class bahut common hoti hai.</td>
         </tr>
         <tr>
           <td><code>.site-header</code></td>
-          <td>Header ko white background, border, and sticky top behavior deta hai.</td>
+          <td>Header website ka top navigation area hai. <code>.site-header</code> rule usko white background, bottom border, and sticky position deta hai. Sticky position ka benefit yeh hai ki scroll karte waqt header top par visible reh sakta hai, jisse navigation easily accessible hoti hai.</td>
         </tr>
         <tr>
           <td><code>.navbar</code></td>
-          <td>Flexbox layout apply karta hai. Logo left and links right side align hote hain.</td>
+          <td><code>.navbar</code> Flexbox layout apply karta hai. Iske andar logo and navigation links hain. Flexbox ki help se logo left side and links right side align hote hain. <code>align-items: center;</code> se dono vertically balanced dikhte hain.</td>
         </tr>
         <tr>
           <td><code>justify-content: space-between;</code></td>
-          <td>Navbar ke first item ko left and last group ko right side push karta hai.</td>
+          <td>Yeh Flexbox property navbar ke items ko horizontal direction mein spread karti hai. Logo left side rahega and nav links right side chale jayenge. Isse navbar professional and balanced dikhta hai.</td>
         </tr>
         <tr>
           <td><code>.nav-links</code></td>
-          <td>Navigation links ko row mein arrange karta hai and links ke beech gap add karta hai.</td>
+          <td>Navigation links ke wrapper ko target karta hai. <code>display: flex;</code> se links row mein aate hain and <code>gap: 18px;</code> se links ke beech consistent spacing aati hai. Spacing ke bina links chipke hue dikhenge.</td>
         </tr>
         <tr>
           <td><code>.nav-links a:hover</code></td>
-          <td>Mouse hover hone par link ka color blue ho jaata hai. Yeh transition topic ka simple use hai.</td>
+          <td>Yeh pseudo-class selector hai. Jab user mouse navigation link par le jaata hai, tab yeh rule apply hota hai. Link ka color blue ho jaata hai. Hover effect user ko batata hai ki yeh item clickable hai.</td>
         </tr>
         <tr>
           <td><code>.hero</code></td>
-          <td>Hero section ko top-bottom spacing and gradient background deta hai.</td>
+          <td>Hero section website ka main introduction area hai. <code>padding: 80px 0;</code> se top and bottom mein large space milta hai. Gradient background se section visually attractive dikhta hai. Hero ka goal hai user ko immediately business ka main message samjhana.</td>
         </tr>
         <tr>
           <td><code>.hero-grid</code></td>
-          <td>CSS Grid use karta hai. Left column text ke liye wide hai, right column card ke liye smaller hai.</td>
+          <td>Hero content ko CSS Grid se two columns mein divide karta hai. <code>1.3fr</code> left content ko zyada space deta hai and <code>0.7fr</code> right card ko thoda kam space deta hai. Yeh layout desktop par modern landing page jaisa dikhta hai.</td>
         </tr>
         <tr>
           <td><code>.button</code></td>
-          <td>Anchor link ko button jaisa design deta hai: background, white text, padding, rounded corners.</td>
+          <td>Anchor link ko button design deta hai. Background blue, text white, padding, border-radius, and bold font milta hai. <code>display: inline-block;</code> important hai kyunki anchor normally inline element hota hai; inline-block se padding and box shape properly kaam karta hai.</td>
         </tr>
         <tr>
           <td><code>transition</code></td>
-          <td>Hover effect ko smooth banata hai. Color and movement suddenly change nahi hote.</td>
+          <td>Transition hover effect ko smooth banata hai. Without transition, background and movement sudden change honge. With transition, button ka color and movement soft feel deta hai. Yeh small detail website ko polished banati hai.</td>
         </tr>
         <tr>
           <td><code>.hero-card, .service-card, .about-box, .contact-box</code></td>
-          <td>Group selector hai. In sab boxes ko same card design milta hai.</td>
+          <td>Yeh group selector hai. Multiple classes ko comma se ek saath target kiya gaya hai. Iska benefit hai ki same card styling baar-baar repeat nahi karni padti. Hero card, service cards, about box, and contact box sabko consistent white card design milta hai.</td>
         </tr>
         <tr>
           <td><code>.services-grid</code></td>
-          <td>Services cards ko 3 equal columns mein arrange karta hai.</td>
+          <td>Services cards ka parent grid container hai. <code>display: grid;</code> and <code>repeat(3, 1fr)</code> se desktop par 3 equal columns bante hain. Yeh CSS Grid topic ka practical use hai.</td>
         </tr>
         <tr>
           <td><code>@media (max-width: 768px)</code></td>
-          <td>Mobile and tablet screen ke liye responsive CSS rules start karta hai.</td>
+          <td>Media query responsive design ke liye use hoti hai. Iska meaning hai: jab screen width 768px ya usse kam ho, tab andar ke CSS rules apply karo. Mobile/tablet par layout adjust karne ke liye yeh very important hai.</td>
         </tr>
         <tr>
           <td><code>grid-template-columns: 1fr;</code></td>
-          <td>Mobile screen par Grid ko one-column layout mein convert karta hai.</td>
+          <td>Mobile screen par Grid ko one-column layout mein convert karta hai. Desktop par hero/services side-by-side ho sakte hain, but mobile par side-by-side layout cramped dikhega. Isliye one-column layout readable and user-friendly hota hai.</td>
         </tr>
       </table>
 
