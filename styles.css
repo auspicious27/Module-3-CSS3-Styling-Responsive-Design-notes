@@ -15,10 +15,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background: var(--bg);
@@ -27,11 +23,11 @@ body {
   line-height: 1.7;
 }
 
-header {
+.hero-top {
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
   border-bottom: 5px solid var(--accent);
   color: #ffffff;
-  padding: 26px 18px;
+  padding: 30px 18px;
 }
 
 .wrap,
@@ -40,17 +36,23 @@ main {
   margin: 0 auto;
 }
 
-header h1 {
+.hero-top h1 {
   margin: 0;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 32px;
   line-height: 1.25;
 }
 
-header p {
+.hero-top p {
   margin: 8px 0 0;
   color: #dbeafe;
-  font-size: 16px;
+}
+
+.tag {
+  color: #bfdbfe;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 main {
@@ -72,23 +74,19 @@ h3 {
   line-height: 1.25;
 }
 
-article > h1:first-child {
+article > h2:first-child {
   margin-top: 0;
 }
 
-h1 {
-  border-bottom: 2px solid var(--border);
-  margin-top: 36px;
-  padding-bottom: 12px;
-}
-
 h2 {
-  color: var(--accent-dark);
-  margin-top: 30px;
+  border-bottom: 2px solid var(--border);
+  margin-top: 34px;
+  padding-bottom: 10px;
 }
 
 h3 {
-  margin-top: 22px;
+  color: var(--accent-dark);
+  margin-top: 26px;
 }
 
 p,
@@ -145,19 +143,15 @@ pre code {
   padding: 0;
 }
 
-.chapter-index td:first-child {
-  font-weight: 700;
-}
-
-.footer-note {
+footer {
   color: var(--muted);
-  text-align: center;
   padding: 22px 16px 40px;
+  text-align: center;
 }
 
 @media (max-width: 760px) {
-  header h1 {
-    font-size: 23px;
+  .hero-top h1 {
+    font-size: 24px;
   }
 
   article {
